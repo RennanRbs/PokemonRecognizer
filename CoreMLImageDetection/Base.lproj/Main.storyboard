@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreMLImageDetection" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xf-YP-70a">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dmI-ly-3mQ"/>
+                                </constraints>
+                                <state key="normal" title="Pick Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pickImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SU1-xj-txP"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brekky" translatesAutoresizingMaskIntoConstraints="NO" id="YnW-qw-gyG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="265"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thinking...." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOP-mk-ejO">
+                                <rect key="frame" x="0.0" y="323" width="375" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="JNy-T1-5w9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pt1-Ad-pWA">
+                                <rect key="frame" x="0.0" y="567" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.4621429443359375" green="0.94244354963302612" blue="0.089652158319950104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pIJ-X9-N5O"/>
+                                </constraints>
+                                <state key="normal" title="Take Photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p7j-Cu-CEs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2xf-YP-70a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5Ee-iz-lGI"/>
+                            <constraint firstAttribute="trailing" secondItem="YnW-qw-gyG" secondAttribute="trailing" id="77b-Bg-bIZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2xf-YP-70a" secondAttribute="bottom" id="EWG-xV-HDM"/>
+                            <constraint firstItem="TOP-mk-ejO" firstAttribute="top" secondItem="YnW-qw-gyG" secondAttribute="bottom" constant="58" id="MBH-Lx-Uoo"/>
+                            <constraint firstItem="YnW-qw-gyG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MDk-0r-7Bb"/>
+                            <constraint firstItem="TOP-mk-ejO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mdw-0S-Y2g"/>
+                            <constraint firstItem="2xf-YP-70a" firstAttribute="top" secondItem="TOP-mk-ejO" secondAttribute="bottom" constant="273" id="ctl-tg-7da"/>
+                            <constraint firstAttribute="trailing" secondItem="2xf-YP-70a" secondAttribute="trailing" id="eF9-ds-qqT"/>
+                            <constraint firstItem="pt1-Ad-pWA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hrq-Dr-atB"/>
+                            <constraint firstItem="2xf-YP-70a" firstAttribute="top" secondItem="pt1-Ad-pWA" secondAttribute="bottom" id="oaa-rc-vf9"/>
+                            <constraint firstAttribute="trailing" secondItem="TOP-mk-ejO" secondAttribute="trailing" id="pLb-kn-QEd"/>
+                            <constraint firstAttribute="trailing" secondItem="pt1-Ad-pWA" secondAttribute="trailing" id="sFr-HL-k3a"/>
+                            <constraint firstItem="YnW-qw-gyG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tqW-r1-xQ8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblResult" destination="TOP-mk-ejO" id="4zq-J3-6UZ"/>
+                        <outlet property="myPhoto" destination="YnW-qw-gyG" id="e79-12-3jJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="brekky" width="500" height="500"/>
+    </resources>
+</document>
