@@ -1,20 +1,19 @@
 //
 //  ViewController.swift
-//  CoreMLImageDetection
+//  testerCoreMl
 //
-//  Created by Andrew Seeley on 12/6/17.
-//  Copyright © 2017 Seemu. All rights reserved.
+//  Created by Rennan Rebouças on 02/07/19.
+//  Copyright © 2019 Rennan Rebouças. All rights reserved.
 //
-
 import UIKit
 import CoreML
 import Vision
 
+@available(iOS 12.0, *)
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet var myPhoto: UIImageView!
     @IBOutlet var lblResult: UILabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +23,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func detectImageContent() {
-        lblResult.text = "Thinking"
+        lblResult.text = "show me the blood"
         
-        guard let model = try? VNCoreMLModel(for: GoogLeNetPlaces().model) else {
+        guard let model = try? VNCoreMLModel(for: PokemonMlModel().model) else {
             fatalError("Failed to load model")
         }
         
         // Create a vision request
-        
         let request = VNCoreMLRequest(model: model) {[weak self] request, error in
             guard let results = request.results as? [VNClassificationObservation],
                 let topResult = results.first
@@ -39,6 +37,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     fatalError("Unexpected results")
             }
             
+
             // Update the Main UI Thread with our result
             DispatchQueue.main.async { [weak self] in
                 self?.lblResult.text = "\(topResult.identifier) with \(Int(topResult.confidence * 100))% confidence"
@@ -87,10 +86,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         picker.dismiss(animated: true, completion: nil)
         
         detectImageContent()
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 

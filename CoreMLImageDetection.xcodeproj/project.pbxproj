@@ -14,6 +14,10 @@
 		94BA5FE41EEE555A001464B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94BA5FE21EEE555A001464B2 /* LaunchScreen.storyboard */; };
 		94BA5FEF1EEE555B001464B2 /* CoreMLImageDetectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BA5FEE1EEE555B001464B2 /* CoreMLImageDetectionTests.swift */; };
 		94BA5FFA1EEE555B001464B2 /* CoreMLImageDetectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BA5FF91EEE555B001464B2 /* CoreMLImageDetectionUITests.swift */; };
+		E814FE9622CCE68900143A17 /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E814FE9522CCE68900143A17 /* ImageClassifier.mlmodel */; };
+		E881AF1822CB99B80041662B /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E881AF1722CB99B80041662B /* MobileNet.mlmodel */; };
+		E883515222CC370C00720F28 /* BloodMLData.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E883515122CC370B00720F28 /* BloodMLData.mlmodel */; };
+		E898843222CCF3830068331E /* PokemonMlModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E898843122CCF3820068331E /* PokemonMlModel.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 		94BA5FF91EEE555B001464B2 /* CoreMLImageDetectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLImageDetectionUITests.swift; sourceTree = "<group>"; };
 		94BA5FFB1EEE555B001464B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94F354111EEE9AB600F28547 /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
+		E814FE9522CCE68900143A17 /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = ImageClassifier.mlmodel; path = ../../ImageClassifier.mlmodel; sourceTree = "<group>"; };
+		E881AF1722CB99B80041662B /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
+		E883515122CC370B00720F28 /* BloodMLData.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BloodMLData.mlmodel; sourceTree = "<group>"; };
+		E898843122CCF3820068331E /* PokemonMlModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PokemonMlModel.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,10 @@
 				94BA5FE01EEE555A001464B2 /* Assets.xcassets */,
 				94BA5FE21EEE555A001464B2 /* LaunchScreen.storyboard */,
 				94BA5FE51EEE555A001464B2 /* Info.plist */,
+				E883515122CC370B00720F28 /* BloodMLData.mlmodel */,
+				E898843122CCF3820068331E /* PokemonMlModel.mlmodel */,
+				E881AF1722CB99B80041662B /* MobileNet.mlmodel */,
+				E814FE9522CCE68900143A17 /* ImageClassifier.mlmodel */,
 				94F354111EEE9AB600F28547 /* GoogLeNetPlaces.mlmodel */,
 			);
 			path = CoreMLImageDetection;
@@ -259,7 +271,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				94BA5FDC1EEE555A001464B2 /* ViewController.swift in Sources */,
+				E898843222CCF3830068331E /* PokemonMlModel.mlmodel in Sources */,
+				E814FE9622CCE68900143A17 /* ImageClassifier.mlmodel in Sources */,
 				94BA5FDA1EEE555A001464B2 /* AppDelegate.swift in Sources */,
+				E883515222CC370C00720F28 /* BloodMLData.mlmodel in Sources */,
+				E881AF1822CB99B80041662B /* MobileNet.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,10 +437,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XLDG57CC7V;
+				DEVELOPMENT_TEAM = 7SH46749RP;
 				INFOPLIST_FILE = CoreMLImageDetection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = seemu.CoreMLImageDetection;
+				PRODUCT_BUNDLE_IDENTIFIER = rennanreboucas.CoreMLImageDetection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -435,10 +451,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XLDG57CC7V;
+				DEVELOPMENT_TEAM = 7SH46749RP;
 				INFOPLIST_FILE = CoreMLImageDetection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = seemu.CoreMLImageDetection;
+				PRODUCT_BUNDLE_IDENTIFIER = rennanreboucas.CoreMLImageDetection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -1,9 +1,9 @@
 //
-//  AppDelegate.swift
-//  CoreMLImageDetection
+//  ViewController.swift
+//  testerCoreMl
 //
-//  Created by Andrew Seeley on 12/6/17.
-//  Copyright © 2017 Seemu. All rights reserved.
+//  Created by Rennan Rebouças on 02/07/19.
+//  Copyright © 2019 Rennan Rebouças. All rights reserved.
 //
 
 import UIKit
